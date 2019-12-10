@@ -1,4 +1,4 @@
-package main
+package print_time
 
 import (
 	"fmt"
