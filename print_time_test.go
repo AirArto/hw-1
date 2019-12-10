@@ -1,4 +1,4 @@
-package print_time
+package printtime
 
 import "testing"
 
