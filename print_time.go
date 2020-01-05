@@ -1,20 +1,13 @@
 package printtime
 
 import (
-	"fmt"
-	"log"
+	"time"
 
 	"github.com/beevik/ntp"
 )
 
 // PrintDt for datetime printing
-func PrintDt() bool {
+func PrintDt() (time.Time, error) {
 	time, err := ntp.Time("0.beevik-ntp.pool.ntp.org")
-	if err == nil {
-		fmt.Printf("Time now is %s\n", time)
-	} else {
-		log.Println("Time displaying error:", err)
-		return false
-	}
-	return true
+	return time, err
 }
