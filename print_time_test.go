@@ -3,7 +3,7 @@ package printtime
 import "testing"
 
 func TestPrint(t *testing.T) {
-	if tryVar := PrintDt(); tryVar == false {
+	if _, err := Do(); err != nil {
 		t.Fatalf("Fatal error in displaying datetime")
 	}
 }
